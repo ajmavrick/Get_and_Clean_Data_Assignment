@@ -1,13 +1,18 @@
 ## Input Data
 
 The input data was obtained from the zip found at:
+
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-as is on
+and is on
 
 Human Activity Recognition Using Smartphones Data Set 
 
-The following file were used from the zip file.
+Further information on the data can be found at:
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+The following files were used from the zip file.
 They should all be copied into your working directory before running
 the R code.
 
@@ -26,7 +31,7 @@ This section contains a simplified version of the transformations
 used to create activity_subjectID_summary.txt
 
 The full R code use to create activity_subjectID_summary.txt
-is run_analaysis.R
+is run_analaysis.R. This was run using R x64 3.0.3.
 
 1) These files were read into R
 
@@ -39,7 +44,7 @@ subject_test.txt
 features.txt
 activity_labels.txt
 
-2) The features txt was used to rename the variables in:
+2) The features.txt was used to rename the variables in:
 
 X_train
 X_test
@@ -94,72 +99,73 @@ for the dimensional units
 
 The variables in activity_subjectID_summary.txt are shown below.
 
-Column  Name
-1	activity
-2	subjectID
-3	Average of fBodyAcc-mean()-X
-4	Average of fBodyAcc-mean()-Y
-5	Average of fBodyAcc-mean()-Z
-6	Average of fBodyAcc-std()-X
-7	Average of fBodyAcc-std()-Y
-8	Average of fBodyAcc-std()-Z
-9	Average of fBodyAccJerk-mean()-X
-10	Average of fBodyAccJerk-mean()-Y
-11	Average of fBodyAccJerk-mean()-Z
-12	Average of fBodyAccJerk-std()-X
-13	Average of fBodyAccJerk-std()-Y
-14	Average of fBodyAccJerk-std()-Z
-15	Average of fBodyAccMag-mean()
-16	Average of fBodyAccMag-std()
-17	Average of fBodyBodyAccJerkMag-mean()
-18	Average of fBodyBodyAccJerkMag-std()
-19	Average of fBodyBodyGyroJerkMag-mean()
-20	Average of fBodyBodyGyroJerkMag-std()
-21	Average of fBodyBodyGyroMag-mean()
-22	Average of fBodyBodyGyroMag-std()
-23	Average of fBodyGyro-mean()-X
-24	Average of fBodyGyro-mean()-Y
-25	Average of fBodyGyro-mean()-Z
-26	Average of fBodyGyro-std()-X
-27	Average of fBodyGyro-std()-Y
-28	Average of fBodyGyro-std()-Z
-29	Average of tBodyAcc-mean()-X
-30	Average of tBodyAcc-mean()-Y
-31	Average of tBodyAcc-mean()-Z
-32	Average of tBodyAcc-std()-X
-33	Average of tBodyAcc-std()-Y
-34	Average of tBodyAcc-std()-Z
-35	Average of tBodyAccJerk-mean()-X
-36	Average of tBodyAccJerk-mean()-Y
-37	Average of tBodyAccJerk-mean()-Z
-38	Average of tBodyAccJerk-std()-X
-39	Average of tBodyAccJerk-std()-Y
-40	Average of tBodyAccJerk-std()-Z
-41	Average of tBodyAccJerkMag-mean()
-42	Average of tBodyAccJerkMag-std()
-43	Average of tBodyAccMag-mean()
-44	Average of tBodyAccMag-std()
-45	Average of tBodyGyro-mean()-X
-46	Average of tBodyGyro-mean()-Y
-47	Average of tBodyGyro-mean()-Z
-48	Average of tBodyGyro-std()-X
-49	Average of tBodyGyro-std()-Y
-50	Average of tBodyGyro-std()-Z
-51	Average of tBodyGyroJerk-mean()-X
-52	Average of tBodyGyroJerk-mean()-Y
-53	Average of tBodyGyroJerk-mean()-Z
-54	Average of tBodyGyroJerk-std()-X
-55	Average of tBodyGyroJerk-std()-Y
-56	Average of tBodyGyroJerk-std()-Z
-57	Average of tBodyGyroJerkMag-mean()
-58	Average of tBodyGyroJerkMag-std()
-59	Average of tBodyGyroMag-mean()
-60	Average of tBodyGyroMag-std()
-61	Average of tGravityAcc-mean()-X
-62	Average of tGravityAcc-mean()-Y
-63	Average of tGravityAcc-mean()-Z
-64	Average of tGravityAcc-std()-X
-65	Average of tGravityAcc-std()-Y
-66	Average of tGravityAcc-std()-Z
-67	Average of tGravityAccMag-mean()
-68	Average of tGravityAccMag-std()
+Column  Name					Type
+1	activity				Factor with 6 levels
+2	subjectID				Integer (1 to 30)
+3	Average of fBodyAcc-mean()-X		Numeric
+4	Average of fBodyAcc-mean()-Y		Numeric
+5	Average of fBodyAcc-mean()-Z		Numeric
+6	Average of fBodyAcc-std()-X		Numeric
+7	Average of fBodyAcc-std()-Y		Numeric
+8	Average of fBodyAcc-std()-Z		Numeric
+9	Average of fBodyAccJerk-mean()-X	Numeric
+10	Average of fBodyAccJerk-mean()-Y	Numeric
+11	Average of fBodyAccJerk-mean()-Z	Numeric
+12	Average of fBodyAccJerk-std()-X		Numeric
+13	Average of fBodyAccJerk-std()-Y		Numeric
+14	Average of fBodyAccJerk-std()-Z		Numeric
+15	Average of fBodyAccMag-mean()		Numeric
+16	Average of fBodyAccMag-std()		Numeric
+17	Average of fBodyBodyAccJerkMag-mean()	Numeric
+18	Average of fBodyBodyAccJerkMag-std()	Numeric
+19	Average of fBodyBodyGyroJerkMag-mean()	Numeric
+20	Average of fBodyBodyGyroJerkMag-std()	Numeric
+21	Average of fBodyBodyGyroMag-mean()	Numeric
+22	Average of fBodyBodyGyroMag-std()	Numeric
+23	Average of fBodyGyro-mean()-X		Numeric
+24	Average of fBodyGyro-mean()-Y		Numeric
+25	Average of fBodyGyro-mean()-Z		Numeric
+26	Average of fBodyGyro-std()-X		Numeric
+27	Average of fBodyGyro-std()-Y		Numeric
+28	Average of fBodyGyro-std()-Z		Numeric
+29	Average of tBodyAcc-mean()-X		Numeric
+30	Average of tBodyAcc-mean()-Y		Numeric
+31	Average of tBodyAcc-mean()-Z		Numeric
+32	Average of tBodyAcc-std()-X		Numeric
+33	Average of tBodyAcc-std()-Y		Numeric
+34	Average of tBodyAcc-std()-Z		Numeric
+35	Average of tBodyAccJerk-mean()-X	Numeric
+36	Average of tBodyAccJerk-mean()-Y	Numeric
+37	Average of tBodyAccJerk-mean()-Z	Numeric
+38	Average of tBodyAccJerk-std()-X		Numeric
+39	Average of tBodyAccJerk-std()-Y		Numeric
+40	Average of tBodyAccJerk-std()-Z		Numeric
+41	Average of tBodyAccJerkMag-mean()	Numeric
+42	Average of tBodyAccJerkMag-std()	Numeric
+43	Average of tBodyAccMag-mean()		Numeric
+44	Average of tBodyAccMag-std()		Numeric
+45	Average of tBodyGyro-mean()-X		Numeric
+46	Average of tBodyGyro-mean()-Y		Numeric
+47	Average of tBodyGyro-mean()-Z		Numeric
+48	Average of tBodyGyro-std()-X		Numeric
+49	Average of tBodyGyro-std()-Y		Numeric
+50	Average of tBodyGyro-std()-Z		Numeric
+51	Average of tBodyGyroJerk-mean()-X	Numeric
+52	Average of tBodyGyroJerk-mean()-Y	Numeric
+53	Average of tBodyGyroJerk-mean()-Z	Numeric
+54	Average of tBodyGyroJerk-std()-X	Numeric
+55	Average of tBodyGyroJerk-std()-Y	Numeric
+56	Average of tBodyGyroJerk-std()-Z	Numeric
+57	Average of tBodyGyroJerkMag-mean()	Numeric
+58	Average of tBodyGyroJerkMag-std()	Numeric
+59	Average of tBodyGyroMag-mean()		Numeric
+60	Average of tBodyGyroMag-std()		Numeric
+61	Average of tGravityAcc-mean()-X		Numeric
+62	Average of tGravityAcc-mean()-Y		Numeric
+63	Average of tGravityAcc-mean()-Z		Numeric
+64	Average of tGravityAcc-std()-X		Numeric
+65	Average of tGravityAcc-std()-Y		Numeric
+66	Average of tGravityAcc-std()-Z		Numeric
+67	Average of tGravityAccMag-mean()	Numeric
+68	Average of tGravityAccMag-std()		Numeric
+

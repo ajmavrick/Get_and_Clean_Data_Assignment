@@ -84,3 +84,5 @@ write.table(activity_subjectID_summary, "activity_subjectID_summary.txt", sep="\
 #Additional code which was used to get column names for CodeBook.Md
 #output_names<-data.frame(names(activity_subjectID_summary))
 #write.csv(output_names, "output_names.csv")
+
+class(activity_subjectID_summary)
