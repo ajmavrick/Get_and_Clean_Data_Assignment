@@ -45,6 +45,10 @@ activity_subjectID_summary.txt
 This final output is tidy as:
 
 1) All variable are in their own columns
+
 2) Each column represents one average of the mean or std measures
+
 3) Each row repsents a grouping of activity and subjectID
+
 4) The table could be merged to other tables by subjectID or (SubjectID and activity)
+
