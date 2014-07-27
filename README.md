@@ -1,6 +1,6 @@
 ##Overview
 
-This repositry contains code to create a tidy summary dataset which containa the averages of mean 
+This repositry contains code to create a tidy summary dataset which contains the averages of mean 
 and standard deviation measurement by activity and subjectID.
 
 The input data was obtained from the zip found at:
