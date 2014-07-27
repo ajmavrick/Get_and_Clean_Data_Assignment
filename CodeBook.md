@@ -66,7 +66,7 @@ give a text description of the activities
 7) The average of the mean and standard deviation measures was then taken
 by subject and activity.
 
-8) This final file was output to txt as
+8) This final file was output to CSV as
 
 activity_subjectID_summary.txt
 
